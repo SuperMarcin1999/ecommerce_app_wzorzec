@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:ecommerce_app_wzorzec/pages/intro_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,6 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: IntroPage(),
+    );
   }
 }
