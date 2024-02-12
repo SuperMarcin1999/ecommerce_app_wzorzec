@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
   // pages to display
   final List<Widget> _pages = [
     // shop page
-    const ShopPage(),
+    ShopPage(),
 
     // cart page
     const CartPage()
@@ -46,14 +46,17 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: Builder(builder: (context) {
-          return IconButton(
-            icon: Icon(
-              Icons.menu,
-              color: Colors.black,
+          return Padding(
+            padding: const EdgeInsets.only(left: 12),
+            child: IconButton(
+              icon: Icon(
+                Icons.menu,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
             ),
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
           );
         }),
       ),
